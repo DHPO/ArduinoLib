@@ -1,3 +1,4 @@
+#define USBCON
 #include "bluetooth.h"
 
 BlueTooth::BlueTooth(int rec, int send, int bps) : serial(rec, send) {
@@ -23,7 +24,7 @@ void BlueTooth::send(int message, int base)
     serial.print((char)0x13);
 }
 
-void BlueTooth::sendFromSecial()
+void BlueTooth::sendFromSerial()
 {
     char val;
     while (Serial.available())

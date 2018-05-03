@@ -6,16 +6,16 @@
 /* 适用型号 HC-06 */
 class BlueTooth
 {
-  private:
+    private:
     SoftwareSerial serial;
     bool ATstatus();
     bool checkOK();
 
-  public:
+    public:
     BlueTooth(int rec, int send, int bps=9600);
     void send(const char *);
     void send(int num, int base=DEC);
-    void sendFromSecial();
+    void sendFromSerial();
     void sendRaw();
     int receive(char *buf, int maxbuf); // receive message to buffer
     int check();          // call serial.available()
